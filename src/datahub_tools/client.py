@@ -421,6 +421,26 @@ def get_datahub_users() -> list[dict[str, str]]:
                 }
                 status
                 isNativeUser
+                relationships(input: {
+                    types: ["IsMemberOfNativeGroup"],
+                    direction: OUTGOING,
+                    start: 0,
+                    count: 1000
+                }) {
+                    relationships {
+                        entity {
+                          ...on CorpGroup {
+                            urn
+                            type
+                            properties { displayName }
+                            editableProperties {
+                                email
+                                slack
+                            }
+                          }
+                        }
+                    }
+                }
             }
         }
     }
