@@ -1,0 +1,16 @@
+{
+    "python.testing.pytestArgs": [
+        "src"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "workbench.editor.autoLockGroups": {
+        "notebookOutputEditor": true,
+        "jupyter-notebook": true,
+        "imagePreview.previewEditor": true,
+        "gitlens.rebase": true,
+        "decompiled.javaClass": true,
+        "default": true,
+        "jsProfileVisualizer.cpuprofile.table": true
+    }
+}
